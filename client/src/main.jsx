@@ -7,6 +7,10 @@ import { NotificationProvider } from './context/NotificationContext.jsx'
 import { CurrencyProvider } from './context/CurrencyContext.jsx'
 import { LanguageProvider } from './context/LanguageContext.jsx'
 import './index.css'
+import { registerSW } from 'virtual:pwa-register'
+
+// Register PWA service worker
+registerSW({ immediate: true })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
